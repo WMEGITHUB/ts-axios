@@ -1,0 +1,21 @@
+var isDone = true;
+var isNumber = 1;
+var isString = '1';
+var isArray = [1, 2, 3];
+var isArray2 = [1, 2, 3];
+var isTuple;
+isTuple = ['1', 1];
+var Color;
+(function (Color) {
+    Color[Color["green"] = 1] = "green";
+    Color[Color["red"] = 2] = "red";
+    Color[Color["blue"] = 3] = "blue";
+})(Color || (Color = {}));
+var colorName = Color[1];
+console.log(colorName);
+var num = 3;
+num = null;
+create({ prop: true });
+var someStr = 'this is a string';
+// let len = (<string>someStr).length;
+var len = someStr.length;
