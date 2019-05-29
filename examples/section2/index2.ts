@@ -30,4 +30,32 @@ let point: Point = {x: 10, y: 12}
 
 let av: number[] = [1, 2];
 let ro: ReadonlyArray<number> = av;
-ro.push(1)
+
+interface Search {
+  (source: string, subStr: string): boolean
+}
+
+let mySearch: Search;
+mySearch = function(src, sub) {
+  let result = src.search(sub);
+  return result > -1;
+}
+
+class Animal {
+  name: string;
+}
+
+class Dog extends Animal {
+  bread: string;
+}
+
+interface NotOkay {
+  [x: number]: Dog;
+  [x: string]: Animal;
+}
+
+interface ReadonlyStringArray {
+  readonly [x: number]: string;
+}
+
+let myArray: ReadonlyStringArray = ['a', 'b'];
